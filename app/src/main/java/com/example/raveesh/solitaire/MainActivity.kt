@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity(), GameView {
         GamePresenter.setGameView(this)
         GameModel.resetGame()
 
+        
+
         verticalLayout {
             leftPadding = dip(4)
             rightPadding = dip(4)
@@ -54,11 +56,14 @@ class MainActivity : AppCompatActivity(), GameView {
                     tableauPileViews[i] = tableauPileView(i).lparams(cardWidth, matchParent)
                 }
 
+                textView()
             }.lparams(height = matchParent) {
                 topMargin = cardHeight/2
             }
         }
+
     }
+
 
 
     override fun update() {
